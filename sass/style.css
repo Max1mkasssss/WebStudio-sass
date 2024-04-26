@@ -135,12 +135,60 @@ table {
   border-spacing: 0;
 }
 
-@keyframes left-right {
-  from {
-    top: 20px;
+@keyframes shake-bottom {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
   }
-  to {
-    bottom: 3px;
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes bounce-top {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
   }
 }
 .header .container {
@@ -179,19 +227,16 @@ table {
   cursor: pointer;
   position: relative;
 }
-.header .container .nav-bar .nav-bar-lists .list-pages .active::before {
+.header .container .nav-bar .nav-bar-lists .list-pages .active:before {
   content: "";
   position: absolute;
   width: 48px;
   height: 4px;
   border-radius: 2px;
   background: rgb(33, 150, 243);
-  top: 25px;
-  left: -2px;
-  animation-name: left-right;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+  top: 130%;
+  margin: 0 auto;
+  animation: shake-bottom 1s both;
 }
 .header .container .nav-bar .nav-bar-lists .list-contacts {
   gap: 40px;
@@ -208,6 +253,59 @@ table {
 .header .container .nav-bar .nav-bar-lists .list-contacts li:hover {
   color: rgb(33, 150, 243);
   cursor: pointer;
+}
+
+.section-hero {
+  height: 600px;
+  background: url(/img/section-hero-back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-hero .container {
+  height: 600px;
+  padding-top: 200px;
+  margin-top: 0;
+}
+.section-hero .container h1 {
+  margin: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 60px;
+  letter-spacing: 6%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-hero .container .button-wrapper {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.section-hero .container .button-wrapper .main-button {
+  min-width: 216px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(33, 150, 243);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 6%;
+  text-align: center;
+  animation: bounce-top 1s both;
+}
+.section-hero .container .button-wrapper .main-button:hover {
+  cursor: pointer;
+  background-color: rgba(33, 149, 243, 0.262);
+  transition: 0.3s;
 }
 
 .container {
