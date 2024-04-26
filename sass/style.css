@@ -153,8 +153,35 @@ table {
 .header .container .nav-bar .nav-bar-lists .list-pages {
   gap: 53px;
 }
+.header .container .nav-bar .nav-bar-lists .list-pages .list-pages-item {
+  color: rgb(33, 33, 33);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-align: left;
+}
+.header .container .nav-bar .nav-bar-lists .list-pages .list-pages-item:hover {
+  color: rgb(33, 150, 243);
+}
+.header .container .nav-bar .nav-bar-lists .list-pages .active {
+  color: rgb(33, 150, 243);
+}
 .header .container .nav-bar .nav-bar-lists .list-contacts {
   gap: 40px;
+}
+.header .container .nav-bar .nav-bar-lists .list-contacts .list-contacts-item {
+  color: rgb(33, 33, 33);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-align: left;
+}
+.header .container .nav-bar .nav-bar-lists .list-contacts .list-contacts-item:hover {
+  color: rgb(33, 150, 243);
 }
 
 .container {

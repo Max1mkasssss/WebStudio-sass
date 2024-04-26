@@ -14,9 +14,36 @@
                 justify-content: center;
                 .list-pages{ 
                     gap: 53px;
+                    .list-pages-item{ 
+                        color: rgb(33, 33, 33);
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        letter-spacing: 2%;
+                        text-align: left;
+                        &:hover{ 
+                            color: $accent-color;
+                        }
+                    }
+                    .active{ 
+                        color: $accent-color;
+                    }
                 }
                 .list-contacts{ 
                     gap: 40px;
+                    .list-contacts-item{ 
+                        color: rgb(33, 33, 33);
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        letter-spacing: 2%;
+                        text-align: left;
+                        &:hover{ 
+                            color: $accent-color;
+                        }
+                    }
                 }
             }
         }
