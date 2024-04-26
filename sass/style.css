@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -134,6 +135,14 @@ table {
   border-spacing: 0;
 }
 
+@keyframes left-right {
+  from {
+    top: 20px;
+  }
+  to {
+    bottom: 3px;
+  }
+}
 .header .container {
   height: 80px;
   margin-bottom: 0;
@@ -153,7 +162,7 @@ table {
 .header .container .nav-bar .nav-bar-lists .list-pages {
   gap: 53px;
 }
-.header .container .nav-bar .nav-bar-lists .list-pages .list-pages-item {
+.header .container .nav-bar .nav-bar-lists .list-pages li {
   color: rgb(33, 33, 33);
   font-family: Roboto;
   font-size: 14px;
@@ -162,16 +171,32 @@ table {
   letter-spacing: 2%;
   text-align: left;
 }
-.header .container .nav-bar .nav-bar-lists .list-pages .list-pages-item:hover {
+.header .container .nav-bar .nav-bar-lists .list-pages li:hover {
   color: rgb(33, 150, 243);
 }
 .header .container .nav-bar .nav-bar-lists .list-pages .active {
   color: rgb(33, 150, 243);
+  cursor: pointer;
+  position: relative;
+}
+.header .container .nav-bar .nav-bar-lists .list-pages .active::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgb(33, 150, 243);
+  top: 25px;
+  left: -2px;
+  animation-name: left-right;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
 .header .container .nav-bar .nav-bar-lists .list-contacts {
   gap: 40px;
 }
-.header .container .nav-bar .nav-bar-lists .list-contacts .list-contacts-item {
+.header .container .nav-bar .nav-bar-lists .list-contacts li {
   color: rgb(33, 33, 33);
   font-family: Roboto;
   font-size: 14px;
@@ -180,8 +205,9 @@ table {
   letter-spacing: 2%;
   text-align: left;
 }
-.header .container .nav-bar .nav-bar-lists .list-contacts .list-contacts-item:hover {
+.header .container .nav-bar .nav-bar-lists .list-contacts li:hover {
   color: rgb(33, 150, 243);
+  cursor: pointer;
 }
 
 .container {
