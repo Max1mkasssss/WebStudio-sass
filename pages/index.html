@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudio</title>
+
+    <!-- styles  -->
+    <link rel="stylesheet" href="../sass/style.css">
+
+    <!-- Normalize  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Icon  -->
+    <link rel="website icon" href="">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container flex">
+            <nav class="nav-bar flex">
+                <!-- <svg><use href="/img/logotype.svg"></use></svg> -->
+                <img src="../img/logotype.svg" alt="Logotype">
+
+                <ul class="nav-bar-lists flex">
+                    <li>
+                        <ul class="list-pages flex">
+                            <li class="list-pages-item active"><a href="index.html">Студія</a></li>
+                            <li class="list-pages-item"><a href="portfolio.html">Портфоліо</a></li>
+                            <li class="list-pages-item"><a href="">Контакти</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="list-contacts flex">
+                            <li class="list-contacts-item mail-before"><a
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                            <li class="list-contacts-item tel-before"><a href="tel:+38 096 111 11 11">+38 096 111 11
+                                    11</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section-hero">
+            <div class="container">
+                <h1>Ефективні рішення для <br> вашого бізнесу</h1>
+                <div class="button-wrapper flex"> <button class="main-button" type="submit" data-modal-open>Замовити
+                        послугу</button>
+                    <!-- <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                            <div class="form-container">
+                                <button class="btn btn-close" data-modal-close>
+                                    <img src="../img/close-btn.svg" alt="close">
+                                </button>
+                                <h4 class="data">Залиште свої дані, ми вам передзвонимо</h4>
+                                <form class="form">
+                                    <div class="form-group">
+                                        <label for="email">Ім'я</label>
+                                        <input required="" name="name" id="name" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Пошта</label>
+                                        <input required="" name="email" id="email" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Телефон</label>
+                                        <input required="" name="tel" id="tel" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="textarea">Коментар</label>
+                                        <textarea required="" cols="50" rows="10" id="textarea"
+                                            name="textarea">          </textarea>
+                                    </div>
+                                    <button type="submit" class="form-submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <div class="our-adventages">
+                    <ul class="our-adventages-list flex">
+                        <li class="our-adventages-list-item">
+                            <ul class="our-adventages-list-inner flex">
+                                <li>
+                                    <div id="svg-1" class="svg flex"><img src="../img/antena.svg" alt="antenna"></div>
+                                </li>
+                                <li>
+                                    <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+                                </li>
+                                <li>
+                                    <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="our-adventages-list-item">
+                            <ul class="our-adventages-list-inner flex">
+                                <li>
+                                    <div id="svg-1" class="svg flex"><img src="../img/clock.svg" alt="antenna"></div>
+                                </li>
+                                <li>
+                                    <h3>ПУНКТУАЛЬНІСТЬ</h3>
+                                </li>
+                                <li>
+                                    <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="our-adventages-list-item">
+                            <ul class="our-adventages-list-inner flex">
+                                <li>
+                                    <div id="svg-1" class="svg flex"><img src="../img/computer.svg" alt="antenna"></div>
+                                </li>
+                                <li>
+                                    <h3>ПЛАНУВАННЯ</h3>
+                                </li>
+                                <li>
+                                    <p>Так само консультація з широким активом значною мірою зумовлює.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="our-adventages-list-item">
+                            <ul class="our-adventages-list-inner flex">
+                                <li>
+                                    <div id="svg-1" class="svg flex"><img src="../img/astranaut.svg" alt="antenna">
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                                </li>
+                                <li>
+                                    <p>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="what-we-do">
+                    <h2>Чим ми займаємося</h2>
+                    <ul class="what-we-do-list flex">
+                        <li id="what-we-do-1" class="what-we-do-list-item">
+                            <div class="flex">
+                                <h4>Десктопні додатки</h4>
+                            </div>
+                        </li>
+                        <li id="what-we-do-2" class="what-we-do-list-item">
+                            <div class="flex">
+                                <h4>Мобільні додатки</h4>
+                            </div>
+                        </li>
+                        <li id="what-we-do-3" class="what-we-do-list-item">
+                            <div class="flex">
+                                <h4>Дизайнерські рішення</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section-our-team">
+            <div class="container">
+                <h2>Наша команда</h2>
+                <ul class="our-team-list flex">
+                    <li class="our-team-list-item">
+                        <img src="../img/ihor.png" alt="">
+                        <h3>Ігор Дем'яненко</h3>
+                        <p>Product Designer</p>
+                        <ul class="list-social-networks flex">
+                            <li class="flex"><img src="../img/instagram.svg" alt=""></li>
+                            <li class="flex"><img src="../img/x.svg" alt=""></li>
+                            <li class="flex"><img src="../img/facebook.svg" alt=""></li>
+                            <li class="flex"><img src="../img/linkedin.svg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="our-team-list-item">
+                        <img src="../img/olha.jpeg" alt="">
+                        <h3>Ольга Рєпіна</h3>
+                        <p>Frontend Developer</p>
+                        <ul class="list-social-networks flex">
+                            <li class="flex"><img src="../img/instagram.svg" alt=""></li>
+                            <li class="flex"><img src="../img/x.svg" alt=""></li>
+                            <li class="flex"><img src="../img/facebook.svg" alt=""></li>
+                            <li class="flex"><img src="../img/linkedin.svg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="our-team-list-item">
+                        <img src="../img/mikola.jpeg" alt="">
+                        <h3>Микола Тарасов</h3>
+                        <p>Marketing</p>
+                        <ul class="list-social-networks flex">
+                            <li class="flex"><img src="../img/instagram.svg" alt=""></li>
+                            <li class="flex"><img src="../img/x.svg" alt=""></li>
+                            <li class="flex"><img src="../img/facebook.svg" alt=""></li>
+                            <li class="flex"><img src="../img/linkedin.svg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="our-team-list-item">
+                        <img src="../img/mihailo.jpeg" alt="">
+                        <h3>Михайло Єрмаков</h3>
+                        <p>UI Designer</p>
+                        <ul class="list-social-networks flex">
+                            <li class="flex"><img src="../img/instagram.svg" alt=""></li>
+                            <li class="flex"><img src="../img/x.svg" alt=""></li>
+                            <li class="flex"><img src="../img/facebook.svg" alt=""></li>
+                            <li class="flex"><img src="../img/linkedin.svg" alt=""></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-regular-customers">
+            <div class="container">
+                <h2>Постійні клієнти</h2>
+                <ul class="regular-customers-list flex">
+                    <li class="regular-customers-list-item"><img src="../img/yago.svg" alt=""></li>
+                    <li class="regular-customers-list-item"><img src="../img/company.svg" alt=""></li>
+                    <li class="regular-customers-list-item"><img src="../img/company2.svg" alt=""></li>
+                    <li class="regular-customers-list-item"><img src="../img/footerpeters.svg" alt=""></li>
+                    <li class="regular-customers-list-item"><img src="../img/brand.svg" alt=""></li>
+                    <li class="regular-customers-list-item"><img src="../img/tagline.svg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper flex">
+                <div class="footer-left">
+                    <img src="../img/logotype-footer.svg" alt="">
+                    <address>м. Київ, пр-т Лесі Українки, 26</address>
+                    <ul class="footer-contacts flex">
+                        <li class="footer-contacts-item"><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li class="footer-contacts-item"><a href="tel:+38 096 111 11 11">+38 096 111 11 11</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <h3>приєднуйтесь</h3>
+                    <ul class="list-social-networks-footer flex">
+                        <li class="flex"><img src="../img/instagram.svg" alt=""></li>
+                        <li class="flex"><img src="../img/x.svg" alt=""></li>
+                        <li class="flex"><img src="../img/facebook.svg" alt=""></li>
+                        <li class="flex"><img src="../img/linkedin.svg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="input-form">
+                    <form class="footer-form">
+                        <div class="form-group-footer flex">
+                            <label>Підпишіться на розсилку</label>
+                            <input placeholder="E mail" type="mail">
+                        </div>
+                        <button class="footer-btn" type="submit">
+                            Підписатися
+                            <img class="tg" src="../img/tg-for-btn.svg" alt="tg">
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>

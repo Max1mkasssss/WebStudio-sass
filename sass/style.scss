@@ -1,0 +1,19 @@
+@import './utils/reset'; 
+@import './utils/variables';
+@import './components/header';
+@import './components/hero';
+@import './components/benefits';
+@import './components/what-we-do';
+@import './components/our-team';
+@import './components/clients';
+@import './components/footer';
+
+
+.container{ 
+    width: 1170px;
+    outline: 2px solid black;
+    margin: 0 auto;
+}
+.flex{ 
+    display: flex;
+}

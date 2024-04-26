@@ -1,0 +1,24 @@
+.header{ 
+    .container{ 
+        height: 80px;
+        margin-bottom: 0;
+        align-items: center;
+        .nav-bar{ 
+            justify-content: space-around;
+            align-items: center;
+            img{ 
+                margin-right: 93px;
+            }
+            .nav-bar-lists{ 
+                gap: 315px;
+                justify-content: center;
+                .list-pages{ 
+                    gap: 53px;
+                }
+                .list-contacts{ 
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}
