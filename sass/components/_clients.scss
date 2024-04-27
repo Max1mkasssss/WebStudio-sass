@@ -1,0 +1,28 @@
+.section-regular-customers{ 
+    margin-top: 94px;
+    .container{ 
+        h2{ 
+            color: $text-color;
+            font-family: Roboto;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 3%;
+            text-align: center;
+        }
+        .regular-customers-list{ 
+                justify-content: space-between;
+                margin-top: 50px;
+                .regular-customers-list-item{ 
+                    width: 170px;
+                    height: 92px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 16px 32px;
+                    border: 1px solid $gray-text-color;
+                    margin-bottom: 94px;
+                }
+        }
+    }
+}
