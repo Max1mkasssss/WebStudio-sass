@@ -131,3 +131,20 @@
     opacity: 1;
   }
 }
+@keyframes swing-text {
+  0% {
+      bottom: 0;
+  }
+  25% {
+      bottom: calc(100% - 70px);
+  }
+  50% {
+      bottom: 0;
+  }
+  75% {
+      bottom: calc(100% - 70px); 
+  }
+  100% {
+      bottom: 0;
+  }
+}

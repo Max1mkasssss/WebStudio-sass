@@ -191,6 +191,23 @@ table {
     opacity: 1;
   }
 }
+@keyframes swing-text {
+  0% {
+    bottom: 0;
+  }
+  25% {
+    bottom: calc(100% - 70px);
+  }
+  50% {
+    bottom: 0;
+  }
+  75% {
+    bottom: calc(100% - 70px);
+  }
+  100% {
+    bottom: 0;
+  }
+}
 .header .container {
   height: 80px;
   margin-bottom: 0;
@@ -306,6 +323,116 @@ table {
   cursor: pointer;
   background-color: rgba(33, 149, 243, 0.262);
   transition: 0.3s;
+}
+
+.about-us {
+  margin-top: 94px;
+}
+.about-us .container .our-adventages .our-adventages-list {
+  gap: 30px;
+}
+.about-us .container .our-adventages .our-adventages-list .our-adventages-list-item {
+  width: 270px;
+}
+.about-us .container .our-adventages .our-adventages-list .our-adventages-list-item .our-adventages-list-inner .svg-item .svg {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: rgb(245, 244, 250);
+}
+.about-us .container .our-adventages .our-adventages-list .our-adventages-list-item .our-adventages-list-inner .svg-item .svg svg {
+  width: 65.32px;
+  height: 70px;
+}
+.about-us .container .our-adventages .our-adventages-list .our-adventages-list-item .our-adventages-list-inner li h3 {
+  color: rgb(33, 33, 33);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 3%;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.about-us .container .our-adventages .our-adventages-list .our-adventages-list-item .our-adventages-list-inner li p {
+  color: rgb(117, 117, 117);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 3%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.what-we-do {
+  margin-top: 94px;
+}
+.what-we-do .container h2 {
+  color: rgb(33, 33, 33);
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 3%;
+  text-align: center;
+}
+.what-we-do .container .what-we-do-list {
+  margin-top: 50px;
+  gap: 30px;
+}
+.what-we-do .container .what-we-do-list #what-we-do-1 {
+  background: url(/img/coding.png);
+}
+.what-we-do .container .what-we-do-list #what-we-do-2 {
+  background: url(/img/mobile-app.png);
+}
+.what-we-do .container .what-we-do-list #what-we-do-3 {
+  background: url(/img/colors.png);
+}
+.what-we-do .container .what-we-do-list #what-we-do-1, .what-we-do .container .what-we-do-list #what-we-do-2, .what-we-do .container .what-we-do-list #what-we-do-3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+}
+.what-we-do .container .what-we-do-list .what-we-do-list-item {
+  width: 370px;
+  height: 294px;
+  outline: 2px solid red;
+  position: relative;
+}
+.what-we-do .container .what-we-do-list .what-we-do-list-item:hover .down-text {
+  animation-name: swing-text;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+.what-we-do .container .what-we-do-list .what-we-do-list-item .down-text {
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+.what-we-do .container .what-we-do-list .what-we-do-list-item .down-text h4 {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 3%;
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 27px;
 }
 
 .container {

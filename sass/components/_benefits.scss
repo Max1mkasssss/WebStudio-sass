@@ -1,0 +1,55 @@
+.about-us{ 
+    margin-top: 94px;
+    .container{ 
+        .our-adventages{ 
+            .our-adventages-list{ 
+                gap: 30px;
+                .our-adventages-list-item{ 
+                    width: 270px;
+                    .our-adventages-list-inner{ 
+                        .svg-item{ 
+                            // NOTHING HERE 
+                            .svg{ 
+                                display: flex;
+                                width: 270px;
+                                height: 120px;
+                                // border: 3px solid red;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 4px;
+                                background: rgb(245, 244, 250);
+                                svg{ 
+                                    width: 65.32px;
+                                    height: 70px;
+                                }
+                            }
+                        }
+                        li{
+                            h3{ 
+                                color: $text-color;
+                                font-family: Roboto;
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 16px;
+                                letter-spacing: 3%;
+                                text-align: left;
+                                text-transform: uppercase;
+                                margin-top: 30px;
+                            }
+                            p{ 
+                                color: $gray-text-color;
+                                font-family: Roboto;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                letter-spacing: 3%;
+                                text-align: left;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.what-we-do{ 
+    margin-top: 94px;
+    .container{ 
+        h2{ 
+            color: $text-color;
+            font-family: Roboto;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 3%;
+            text-align: center;
+        }
+        .what-we-do-list{
+            margin-top: 50px;
+            gap: 30px; 
+            #what-we-do-1{ 
+                background: url(/img/coding.png);
+            }
+            #what-we-do-2{ 
+                background: url(/img/mobile-app.png);
+            }
+            #what-we-do-3{ 
+                background: url(/img/colors.png);
+            }
+            #what-we-do-1, #what-we-do-2, #what-we-do-3{ 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-clip: border-box;
+                background-size: cover;
+            }
+            .what-we-do-list-item{
+                width: 370px;
+                height: 294px;
+                outline: 2px solid red;
+                position: relative;
+                &:hover .down-text{ 
+                    animation-name: swing-text;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 3s;
+                    animation-delay: 0;
+                    animation-iteration-count: infinite;
+                }
+                .down-text{ 
+                    height: 70px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background: rgba(47, 48, 58, 0.8);
+                    h4{ 
+                        color: $white-text-color;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 16px;
+                        letter-spacing: 3%;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-align: center;
+                        margin-top: 27px;
+                        margin-bottom: 27px;
+                    }
+                }
+            }
+        }
+    }
+}
