@@ -37,8 +37,8 @@
               height: 4px;
               border-radius: 2px;
               background: rgb(33, 150, 243);
-              top: 130%; 
-              left: -5%;
+              top: 130%;
+              // left: -5%;
               animation: shake-bottom 1s both;
             }
           }
@@ -61,5 +61,21 @@
         }
       }
     }
+  }
+}
+.active-longer {
+  color: $accent-color;
+  cursor: pointer;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgb(33, 150, 243);
+    top: 130%;
+    left: -5%;
+    animation: shake-bottom 1s both;
   }
 }

@@ -216,6 +216,17 @@ table {
     transform: translateX(-5px);
   }
 }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .header .container {
   height: 80px;
   margin-bottom: 0;
@@ -260,7 +271,6 @@ table {
   border-radius: 2px;
   background: rgb(33, 150, 243);
   top: 130%;
-  left: -5%;
   animation: shake-bottom 1s both;
 }
 .header .container .nav-bar .nav-bar-lists .list-contacts {
@@ -278,6 +288,23 @@ table {
 .header .container .nav-bar .nav-bar-lists .list-contacts li:hover {
   color: rgb(33, 150, 243);
   cursor: pointer;
+}
+
+.active-longer {
+  color: rgb(33, 150, 243);
+  cursor: pointer;
+  position: relative;
+}
+.active-longer:before {
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgb(33, 150, 243);
+  top: 130%;
+  left: -5%;
+  animation: shake-bottom 1s both;
 }
 
 .section-hero {
@@ -331,6 +358,154 @@ table {
   cursor: pointer;
   background-color: rgba(33, 149, 243, 0.262);
   transition: 0.3s;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+}
+
+.btn-close {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  z-index: 100000000;
+}
+
+.form-container {
+  width: 528px;
+  background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form-container button:active {
+  scale: 0.95;
+}
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-container .form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.form-container .form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+.form-container .form .form-group input {
+  width: 448px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+.form-container .form .form-group input::-moz-placeholder {
+  opacity: 0.5;
+}
+.form-container .form .form-group input::placeholder {
+  opacity: 0.5;
+}
+.form-container .form .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+.form-container .form .form-group textarea {
+  width: 448px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+.form-container .form .form-group textarea::-moz-placeholder {
+  opacity: 0.5;
+}
+.form-container .form .form-group textarea::placeholder {
+  opacity: 0.5;
+}
+.form-container .form .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+.form-container .form .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.form-container .form .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .about-us {
@@ -402,7 +577,9 @@ table {
 .what-we-do .container .what-we-do-list #what-we-do-3 {
   background: url(/img/colors.png);
 }
-.what-we-do .container .what-we-do-list #what-we-do-1, .what-we-do .container .what-we-do-list #what-we-do-2, .what-we-do .container .what-we-do-list #what-we-do-3 {
+.what-we-do .container .what-we-do-list #what-we-do-1,
+.what-we-do .container .what-we-do-list #what-we-do-2,
+.what-we-do .container .what-we-do-list #what-we-do-3 {
   background-position: center;
   background-repeat: no-repeat;
   background-clip: border-box;
@@ -705,8 +882,81 @@ footer .container .footer-wrapper .input-form button:hover .tg {
   transform: rotate(360deg);
 }
 
-#net-1:hover, #net-2:hover, #net-3:hover, #net-4:hover {
+#net-1:hover,
+#net-2:hover,
+#net-3:hover,
+#net-4:hover {
   cursor: pointer;
+}
+
+.buttons-list-wrapper {
+  margin-top: 94px;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-list-wrapper .buttons-list {
+  gap: 8px;
+}
+.buttons-list-wrapper .buttons-list .buttons-list-item button {
+  height: 38px;
+  background: rgb(245, 244, 250);
+  color: rgb(33, 33, 33);
+  font-family: var(--roboto);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 3%;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.buttons-list-wrapper .buttons-list .buttons-list-item button:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(33, 150, 243);
+}
+
+.card-list {
+  margin-top: 50px;
+  margin-bottom: 94px;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+}
+.card-list .card-list-item {
+  width: 370px;
+  height: 404px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  border-left: 1px solid rgb(238, 238, 238);
+  border-right: 1px solid rgb(238, 238, 238);
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  background: rgb(255, 255, 255);
+}
+.card-list .card-list-item h3 {
+  padding: 0;
+  padding-left: 20px;
+  margin-top: 20px;
+  color: rgb(33, 33, 33);
+  font-family: var(--roboto);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 6%;
+  text-align: left;
+}
+.card-list .card-list-item p {
+  padding: 0;
+  padding-left: 20px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  color: rgb(117, 117, 117);
+  font-family: var(--roboto);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 3%;
+  text-align: left;
 }
 
 .container {

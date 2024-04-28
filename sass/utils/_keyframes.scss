@@ -133,27 +133,40 @@
 }
 @keyframes swing-text {
   0% {
-      bottom: 0;
+    bottom: 0;
   }
   25% {
-      bottom: calc(100% - 70px);
+    bottom: calc(100% - 70px);
   }
   50% {
-      bottom: 0;
+    bottom: 0;
   }
   75% {
-      bottom: calc(100% - 70px); 
+    bottom: calc(100% - 70px);
   }
   100% {
-      bottom: 0;
+    bottom: 0;
   }
 }
 @keyframes button-animation {
   0% {
-      transform: translateX(5px);
+    transform: translateX(5px);
   }
 
   100% {
-      transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
