@@ -148,3 +148,12 @@
       bottom: 0;
   }
 }
+@keyframes button-animation {
+  0% {
+      transform: translateX(5px);
+  }
+
+  100% {
+      transform: translateX(-5px);
+  }
+}
