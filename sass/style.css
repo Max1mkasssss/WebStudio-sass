@@ -135,6 +135,16 @@ table {
   border-spacing: 0;
 }
 
+.container {
+  width: 1170px;
+  outline: 2px solid black;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
 @keyframes shake-bottom {
   0%, 100% {
     transform: translateX(0%);
@@ -957,14 +967,4 @@ footer .container .footer-wrapper .input-form button:hover .tg {
   line-height: 30px;
   letter-spacing: 3%;
   text-align: left;
-}
-
-.container {
-  width: 1170px;
-  outline: 2px solid black;
-  margin: 0 auto;
-}
-
-.flex {
-  display: flex;
 }/*# sourceMappingURL=style.css.map */
